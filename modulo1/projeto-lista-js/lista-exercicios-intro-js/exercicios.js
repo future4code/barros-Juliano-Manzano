@@ -19,11 +19,12 @@ function imprimeMensagem() {
 // EXERCÍCIO 01
 function calculaAreaRetangulo() {
   // implemente sua lógica aqui
-let ladoA = Number.prompt("Insira um lado do retângulo")
-let ladoB = Number.prompt("Insira outro lado do retângulo")
-let area = ladoA * ladoB
+    let altura = Number(prompt("valor"))
+    let largura = Number(prompt("valor"))
+ let area = altura * largura
+    
 console.log(area)
-}
+  }
 
 // EXERCÍCIO 02
 function imprimeIdade() {
@@ -37,8 +38,8 @@ console.log(idade)
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
   // implemente sua lógica aqui
-let peso = Number.prompt("Quantos Kilos você tem ?")
-let altura = Number.prompt("Qual a sua altura em metros ?")
+let peso = Number(prompt("Quantos Kilos você tem ?"))
+let altura = Number(prompt("Qual a sua altura em metros ?"))
 let IMC = peso/(altura*altura)
 console.log(IMC)
 }
