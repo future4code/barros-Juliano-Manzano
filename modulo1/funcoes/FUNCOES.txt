@@ -1,0 +1,99 @@
+
+/*-----------------------------FUNÇOES----------------------------------------
+*/
+imprimirOlaMundo()// Antes da Declaração
+function imprimirOlaMundo(){
+    console.log("Olá Mundo!")
+
+}
+imprimirOlaMundo()// Depois da Declaração
+
+//string->number=Number(string)
+//replaceAll(i,n)
+
+function calculaArea(altura, largura){
+    const area = altura * largura
+    console.log(area)
+}
+calculaArea(2,3)
+
+
+//exercicio 2
+
+function olaFulano(nome){
+ console.log(`Olá ${nome}`)
+}
+olaFulano("Tati")
+olaFulano("Mafe")
+olaFulano("Jeferson")
+
+//usando o prompt
+
+function olaFulano(nome){
+nome = prompt("qual é o seu nome ?")
+    console.log(`Olá ${nome}`)
+   }
+   olaFulano()
+
+// testando prompt
+
+function olaFulano(nome){
+    nome = prompt("qual é o seu nome ?")
+        console.log(`Olá ${nome}`)
+       }
+       olaFulano()
+       olaFulano()
+       olaFulano()
+
+//-------Escopo-----
+const a=1
+function imprimeVariavel(){
+    const b=2
+    //local
+console.log("Local a", a)
+console.log("Local b", b)
+}
+//global
+imprimeVariavel()
+console.log("Global a", a)
+
+//console.log("Global b", b) //indefinido  
+
+//-----------return----------
+//----exercicio 3---
+function soma(valor1, valor2){
+    return valor1 + valor2
+}
+
+console.log (soma(10,54))
+let resultado = soma(20,43)
+console.log(resultado)
+
+//------exercicio 4------
+
+array22 = [8,42,31,4,57,24]
+function divisaoArray(array22){
+novoArray = []
+ultimoElemento = array22[array22.length - 1]
+primeiroElemento = array22[0]
+
+novoArray.push(ultimoElemento / 2)
+novoArray.push(primeiroElemento / 2)
+return novoArray
+}
+
+console.log(divisaoArray(array22))
+
+//-----------exercicio 5---
+
+let olaFulano1 = function(nome3){
+    console.log(`Olá ${nome3}`)
+}
+olaFulano1("Tati")
+
+//3
+
+let somaNumeros = (valor3, valor4) =>{
+    return valor3 + valor4
+}
+console.log(soma(32,16))

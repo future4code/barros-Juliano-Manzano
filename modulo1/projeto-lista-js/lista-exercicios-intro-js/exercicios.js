@@ -21,9 +21,8 @@ function calculaAreaRetangulo() {
   // implemente sua lógica aqui
     let altura = Number(prompt("valor"))
     let largura = Number(prompt("valor"))
- let area = altura * largura
-    
-console.log(area)
+const area = altura * largura
+    console.log(area)
   }
 
 // EXERCÍCIO 02
