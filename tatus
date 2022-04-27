@@ -1,0 +1,74 @@
+[33mcommit fadf0523f043af1a7e1ffcb94ab70d6092ab75d1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mprojeto-lista-js[m[33m)[m
+Merge: b2ff5ec 5912ee3
+Author: JulianoManzano <102270138+JulianoManzano@users.noreply.github.com>
+Date:   Thu Apr 14 17:27:20 2022 -0400
+
+    Merge pull request #7 from future4code/variaveis
+    
+    Aula Variaveis
+
+[33mcommit 5912ee3dd608a6db02b539e5dc709bbe4190624f[m[33m ([m[1;31morigin/variaveis[m[33m, [m[1;32mvariaveis[m[33m)[m
+Author: Juliano Manzano <julianomanzano@gmail.com>
+Date:   Tue Apr 12 19:19:01 2022 -0400
+
+    Aula Variaveis
+
+[33mcommit b2ff5ec67ea6d5349f70c2ef174b96ce2287caea[m
+Merge: bcb48a2 2cd1868
+Author: MaferAlmeida <99834764+MaferAlmeida@users.noreply.github.com>
+Date:   Mon Apr 11 21:17:49 2022 -0300
+
+    Merge pull request #6 from future4code/projeto-onboarding
+    
+    Projeto Onboarding
+
+[33mcommit bcb48a274d3244695114a1e54cc16b440837abae[m
+Merge: 0785594 073dba2
+Author: MaferAlmeida <99834764+MaferAlmeida@users.noreply.github.com>
+Date:   Mon Apr 11 21:17:00 2022 -0300
+
+    Merge pull request #5 from future4code/git-5
+    
+    redes sociais
+
+[33mcommit 2cd1868acfaad2c8243e2b9ac9643d97624a4400[m[33m ([m[1;31morigin/projeto-onboarding[m[33m, [m[1;32mprojeto-onboarding[m[33m)[m
+Author: Juliano Manzano <julianomanzano@gmail.com>
+Date:   Sat Apr 9 20:52:47 2022 -0400
+
+    Projeto Onboarding
+
+[33mcommit 073dba2fb57b731a618f0a8c3ae3ba80e2102737[m[33m ([m[1;31morigin/git-5[m[33m, [m[1;32mgit-5[m[33m)[m
+Author: Juliano Manzano <julianomanzano@gmail.com>
+Date:   Fri Apr 8 18:03:52 2022 -0400
+
+    redes sociais
+
+[33mcommit 4ff816786bf6b4e9dba7943f0207b5da5dbce814[m[33m ([m[1;31morigin/git-4[m[33m, [m[1;32mgit-4[m[33m)[m
+Author: Juliano Manzano <julianomanzano@gmail.com>
+Date:   Fri Apr 8 17:59:31 2022 -0400
+
+    minhas comidas
+
+[33mcommit 3c7c5da649d13c21064e1fc28baa945cc2bec7f4[m[33m ([m[1;31morigin/git-3[m[33m, [m[1;32mgit-3[m[33m)[m
+Author: Juliano Manzano <julianomanzano@gmail.com>
+Date:   Fri Apr 8 17:53:17 2022 -0400
+
+    Alguns Filmes e séries
+
+[33mcommit 7404e35251c293162a49060a2d4b4959f33a036d[m[33m ([m[1;31morigin/git-2[m[33m, [m[1;32mgit-2[m[33m)[m
+Author: Juliano Manzano <julianomanzano@gmail.com>
+Date:   Fri Apr 8 17:45:28 2022 -0400
+
+    Minhas musicas favoritas
+
+[33mcommit 730936ec771b7b4a0f7cd454f558b6ab14f25d1a[m[33m ([m[1;31morigin/git-1[m[33m, [m[1;32mgit-1[m[33m)[m
+Author: Juliano Manzano <julianomanzano@gmail.com>
+Date:   Fri Apr 8 17:27:08 2022 -0400
+
+    Descrevendo minha bio
+
+[33mcommit 07855940b46ab91b3d8db89625961ed4dfb0364a[m
+Author: João Vinicius Alves <jvp.alves@hotmail.com>
+Date:   Tue Mar 29 13:43:16 2022 -0300
+
+    Initial commit
