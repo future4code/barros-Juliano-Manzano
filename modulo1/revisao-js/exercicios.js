@@ -84,6 +84,7 @@ function retornaNPrimeirosPares(n) {
     let novoArray= numerosPar.reduce(function(a, b) {
       return novoArray.max(a, b);
  }
+}
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
