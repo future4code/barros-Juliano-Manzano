@@ -77,8 +77,13 @@ return doisnumeros*/
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
-}
+  let pares = function (numero) {
+    return (numero % 2 ===0);
+    }
+    let numerosPar = n.filter(pares);
+    let novoArray= numerosPar.reduce(function(a, b) {
+      return novoArray.max(a, b);
+ }
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
@@ -93,7 +98,25 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
+  let n = [2,32,5,12,1,0,28,29,369,325,23,22,44,]
+  let menor = Math.min.apply(Math,n)
+  n.sort(function(a,b){
+    if(a>b){
+      return 1
+    }else if(a<b){
+      return -1
+    }
+    return 0
+  })
+  let menor2 = n[1]
+  let maior = Math.max.apply(Math,n)
+  let maior2 = []
+  for(let i =0;i<n.length;i++){
+    if(n[i]>maior2 && n[i]!=maior){
+      maior2=n[i]
+    }
+  }
+  return array
 }
 
 // EXERCÍCIO 11
