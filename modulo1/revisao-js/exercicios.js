@@ -5,36 +5,36 @@
 
 // EXERCÍCIO 01
 function retornaTamanhoArray(array) {
-  /* listaDeCores=["azul", "Amarelo", "Vermelho"]
-    return array.length*/
+   listaDeCores=["azul", "Amarelo", "Vermelho"]
+    return array.length
 }
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
- /* arrayInverte=[0,8,23,16,10,15,41,12,13]
-  return array.reverse()*/
+  arrayInverte=[0,8,23,16,10,15,41,12,13]
+  return array.reverse()
 }
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-    /*
+    
       array.sort((a, b)=> a - b)
-        return array*/
+        return array
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-    /*let pares = function (numero) {
+    let pares = function (numero) {
     return (numero % 2 ===0);
     }
     let numerosPar = array.filter(pares);
-    return numerosPar*/
+    return numerosPar
 }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
   
-  /*let parElevado = function (numero1) {
+  let parElevado = function (numero1) {
     return (numero1 % 2 ===0);
     }
     let numerosParElevado = array.filter(parElevado);
@@ -42,20 +42,20 @@ function retornaNumerosParesElevadosADois(array) {
      return Math.pow(item, 2); //retorna o item elevado ao quadrado
   });
   
-  return quadrados*/
+  return quadrados
 }
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
- /* let max = array.reduce(function(a, b) {
+  let max = array.reduce(function(a, b) {
   return Math.max(a, b);
 })
-return max*/
+return max
 }
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-/*let numero
+let numero
 let diferenca
 let modulo
 if(num1 >num2){
@@ -72,7 +72,7 @@ doisnumeros = {
   maiorDivisivelPorMenor: modulo,
   diferenca: diferenca
 }
-return doisnumeros*/
+return doisnumeros
 }
 
 // EXERCÍCIO 08
@@ -88,13 +88,13 @@ function retornaNPrimeirosPares(n) {
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
- /* if (ladoA === ladoB && ladoB === ladoC && ladoA === ladoC) {
+  if (ladoA === ladoB && ladoB === ladoC && ladoA === ladoC) {
     return "Equilátero";
 } else if (ladoA !== ladoB && ladoB !== ladoC && ladoA !== ladoC) {
     return "Escaleno";
 } else {
     return "Isósceles";
-}*/
+}
 }
 
 // EXERCÍCIO 10
