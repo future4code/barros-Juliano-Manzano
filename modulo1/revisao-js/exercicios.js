@@ -83,7 +83,7 @@ function retornaNPrimeirosPares(n) {
     let numerosPar = n.filter(pares);
     let novoArray= numerosPar.reduce(function(a, b) {
       return novoArray.max(a, b);
- }
+ })
 }
 
 // EXERCÍCIO 09
@@ -169,8 +169,10 @@ for (let i = 0; i <contas.length; i++){
   function calculaSaldo (utilizador) {
     utilizador[i].compras.forEach(nr => entradas.push(nr*-1)) 
     };
-    function somaNumeros{
-      return numeros.reduce((sum,nr)=> sum + nr, 0);
+    function somaNumeros() {
+      return numeros.reduce((sum,nr)=> {
+        return sum + nr;
+      }, 0);
     }
     contas[i].compras = []
     contas[i].saldoTotal +=somaNumeros(entradas)
