@@ -1,0 +1,58 @@
+
+body {
+    color: white;
+    background-color: rgba(250, 6, 250, 0.295);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: rgb(199, 161, 211);
+   }
+      
+  h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+    padding: 25px;
+    align-items: center;
+    background-color: rgb(36, 2, 51);
+   }
+   
+   a {
+    color:rgb(14, 1, 14);
+    text-decoration: none;
+   }
+   
+   .foot {
+    background-color: #000;
+   }
+
+   .gato> img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgb(1, 0, 31)
+   }
+
+   .redes-sociais> img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+   }
+   td>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+   }
+   td{
+      
+    align-items: center;
+      
+   }
+
+   .center {
+       text-align: center;
+   }
