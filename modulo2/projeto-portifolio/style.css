@@ -145,18 +145,20 @@ section .title::after{
     padding: 5px;
     transform: translateX(-50%);
 }
-/* sobre */
-
-.about, .service{
+.about, .service, .skills, .teams{
     font-family: 'Roboto', sans-serif;
 }
 .about .about-content,
-.service .serv-content{
-    display: flex;
+.service .serv-content
+.skills .skills-content{
+    display:flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
+/* sobre */
+
+
 .about .title::after{
     content: "Quem sou eu";
 }
@@ -200,14 +202,17 @@ section .title::after{
     border-radius: 6px;
 }
 /*  Sessão Serviços  */
-.service{
+.service, .teams{
     background: #111;
     color: #fff;
+    
 }
-.service .title::before{
+.service .title::before,
+.teams .title::before{
     background: #fff;
 }
-.service .title::after{
+.service .title::after,
+.teams .title::after{
     background: #111;
     content: "Realizados";
 }
@@ -218,7 +223,138 @@ section .title::after{
     border-radius: 6px;
     padding: 20px 25px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
+.service .serv-content .card:hover{
+    background: rgb(255, 123, 0);
+}
+.service .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.service .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.service .serv-content .card ion-icon{
+    font-size: 50px;
+    color: rgb(255, 123, 0);
+}
+.service .serv-content .card:hover ion-icon{
+    color: #fff;
+}
+
+
+.service .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+/*  sessão especialidades  */
+.skills .title::after{
+    content: "Que faço";
+
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: rgb(255, 123, 0);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(255, 123, 0);
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: rgb(255, 123, 0);
+    background: none;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(255, 123, 0);
+}
+.skills .skills-content .right .html::before{
+    width: 65%;
+}
+.skills .skills-content .right .css::before{
+    width: 58%;
+}
+.skills .skills-content .right .js::before{
+    width: 42%;
+}
+.skills .skills-content .right .php::before{
+    width: 12%;
+}
+.skills .skills-content .right .mysql::before{
+    width: 51%;
+}
+.skills .skills-content .right .c::before{
+    width: 83%;
+}
+.skills .skills-content .column{
+    width: 100%;
+    margin-bottom: 25px ;
+
+}
+/*  Equipe  */
+.teams .title::after{
+    content: "Epecializada";
+}
+.teams .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+}
+.teams .carousel .card img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 123, 0);
+}
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /*  responsivo  */
 @media (max-width: 1300px){
@@ -285,6 +421,10 @@ section .title::after{
     .about .about-content .right{
         flex: 100%;
     }
+    .service .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 680px){
     .home .home-content .text-2{
@@ -295,6 +435,9 @@ section .title::after{
     }
     .home .home-content a{
         font-size: 15px;
+    }
+    .service .serv-content .card{
+        width: 100%;
     }
 }
 @media (max-width: 490px){
