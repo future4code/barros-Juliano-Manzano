@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #fff;
+    margin:0;
+
+}
+header{
+    background: mediumvioletred;
+    display: flex;
+    align-items: center;
+    height: 7vh;
+}
+header h3{
+    color: black;
+    position: absolute;
+    height: 20px;
+    left: 50px;
+}
+header img{
+    position: absolute;
+    height: 3vh;
+    border: 5px;
+    padding: 20px;
+}
+header button{
+    height: 20px;
+    width: 40px;
+    position:absolute; 
+    left:92%;
+}
+main{
+    height: 86vh;
+}
+main .navbar {
+   
+    background: #f2d0e0;
+    width: 15%;
+    height: 86vh;
+
+}
+/*tratamento de imagens*/
+.imhome{
+    position: absolute;
+    height: 15px;
+    margin-top: 5%;
+    left: 2%;
+}
+.improduto{
+    position: absolute;
+    height: 15px;
+    margin-top: 5%;
+    left: 2%;
+}
+.imcarrinho{
+    position: absolute;
+    height: 15px;
+    margin-top: 5%;
+    left: 2%;
+}
+.imperfil{
+    position: absolute;
+    height: 15px;
+    margin-top: 5%;
+    left: 2%;
+}
+
+.home a{
+    position: absolute;
+    height: 20%;
+    left: 5%;
+    margin-top: 5%;
+}
+.produto a{
+    position: absolute;
+    height: 20%;
+    left: 5%;
+    margin-top: 5%;
+}
+.carrinho a{
+    position: absolute;
+    height: 20%;
+    left: 5%;
+    margin-top: 5%;
+}
+.perfil a{
+    position: absolute;
+    height: 20%;
+    left: 5%;
+    margin-top: 5%;
+}
+.seta{
+    position: absolute;
+    width: 20px;
+    height: 3vh;
+    left: 12%;
+    margin-top: 5%;
+}
+
+footer{
+    background: mediumvioletred;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+}
+footer img{
+    height: 2vh;
+}
+
+.produtos {
+    display: flex;
+        margin-left:30vh;
+        align-items: center;
+        height: 180px;
+   
+}
+.card{
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
+    padding: 20px;
+    margin: 1px;
+    width: 400px;
+    transition: all 0.3s ease-out;
+    
+
+}
+.card:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+
+}
+.produtos img{
+   
+    max-width: 200px;
+    max-height: 200px;
+}
+.produto .text{
+    color: black;
+    align-content: center;
+}
