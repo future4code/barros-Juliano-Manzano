@@ -1,0 +1,13 @@
+      ANATOMIA DE UMA CAIXA
+altura = height
+Largura = width
+linha = border
+espaço interno, preenchimento = padding
+espaço externo = margin
+borda dentro da margin = outline
+
+         tipos de caixa
+box-level 100% do view port
+<div>
+inline-level dentro da linha 
+<span>
