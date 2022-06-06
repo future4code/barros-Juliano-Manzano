@@ -1,0 +1,85 @@
+body{
+    width: 99%;
+    height: 99%;
+    background: rgba(253, 125, 19, 0.253);
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*  cabeçalho com o formulário de busca  */
+header{
+    background: rgb(255, 145, 0);
+}
+footer{
+    background: rgb(255, 145, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    
+    /*bottom: 0;
+    position: absolute;
+    width: 100%;*/
+}
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 145, 0);
+    padding: 0.5em;
+}
+form{
+    border:1px solid #fff;
+    border-radius: 0.3em;
+    padding: 00.3em;
+}
+form input,
+form button{
+    font-size: 1.2em;
+    border-radius: 0.2em;
+    border: none;
+    padding: 00.2em;
+}
+form button{
+    cursor: pointer;
+    background: none;
+    color: #fff;
+}
+form button:hover{
+    background-color: #fff;
+    color: blueviolet;
+}
+form button ion-icon{
+    width: 30px;
+}
+/*  grade */
+.container{
+    background: rgb(235, 227, 227);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+/*  formatação dos card  */
+.card{
+    width: 300px;
+    margin: 8px;
+    background-color: rgb(255, 145, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgb(255, 145, 0);
+    transition: 0.3s;
+}
+.card video{
+    width: 100%;
+}
+
+.container .card a,
+.container .card h2{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.card:hover{
+    transform: scale3d(1.1, 1.1, 1);
+}
