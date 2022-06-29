@@ -7,17 +7,7 @@ import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
-
-
-
 function Post(props){
-  // eslint-disable-next-line no-unused-vars
-  const [state, setState] = useState({
-    curtido: false,
-    numeroCurtidas: 0,
-    comentando: false,
-    numeroComentarios: 0
-  })
 
   const [numeroCurtidas, setNumeroCurtidas] = useState (0)
   const [curtido, setCurtido] = useState(false)
@@ -26,8 +16,11 @@ function Post(props){
 
   
   const onClickCurtida = () => {
-    setCurtido(!curtido)
-    setNumeroCurtidas(numeroCurtidas + 1)  
+    if (setCurtido(!curtido)){
+    setNumeroCurtidas(numeroCurtidas - 1) 
+    }else{
+      setNumeroCurtidas(numeroCurtidas + 1)
+    } 
   }
 
   const onClickComentario = () => {
@@ -54,9 +47,11 @@ function Post(props){
     }
 
   let componenteComentario
-
+    
     if(comentando) {
       componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
+    }else{
+      console.log(SecaoComentario.placeholder)
     }
 
   return(
@@ -72,7 +67,7 @@ function Post(props){
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
-          valorContador={state.numeroCurtidas}
+          valorContador={numeroCurtidas}
         />
 
         <IconeComContador
