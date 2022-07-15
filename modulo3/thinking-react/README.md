@@ -1,5 +1,14 @@
-# Componentização
+# PR
+https://github.com/future4code/barros-Juliano-Manzano/pull/38
 
+# Componentização
+https://github.com/JulianoManzano/barros-Juliano-Manzano/blob/thinking-react/modulo3/thinking-react/src/diagrama/componentizacao.png?raw=true
+
+# Fluxograma
+https://github.com/JulianoManzano/barros-Juliano-Manzano/blob/thinking-react/modulo3/thinking-react/src/diagrama/fluxograma.png?raw=true
+
+# KanBan
+https://github.com/JulianoManzano/barros-Juliano-Manzano/blob/thinking-react/modulo3/thinking-react/src/diagrama/Trello.png?raw=true
 
 # Getting Started with Create React App
 
