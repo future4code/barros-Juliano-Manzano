@@ -4,15 +4,20 @@
 html, body {
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+h2 {
+    font-style: italic;
 }
 
 * {
     font-family: 'Inter', sans-serif;
 }
 
-body {
-    text-align: center;
-
+.titulo-1 {
+    font-size: 90px;
+    color: rgb(255,255,255);
 }
 
 .botao-1 {
@@ -24,8 +29,26 @@ body {
     border-radius: 30px;
     border: none;
 }
+
 .botao-1:hover {
     background: linear-gradient(260deg, rgb(254,48,114), rgb(255,89,64));
+}
+
+.botao-3{
+    color: rgb(224, 0, 0);
+    background-color: rgb(218, 27, 27);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: solid 2px rgb(192, 15, 15);
+    margin: 6px;
+}
+
+.botao-3:hover {
+    color: rgb(48,48,48);
+    border: solid 2px rgb(48,48,48);
 }
 
 /*-------------Barra de Navegação--NavBar---------*/
@@ -49,7 +72,6 @@ nav .botao-nav{
 nav .botao-nav:disabled {
     background: rgb(189,180,180);
     color: rgb(160,38,75);
-
 }
 
 nav .logo-container {
@@ -71,14 +93,20 @@ nav .logo-container .logo{
         to bottom,
         rgba(0,0,0,0.65)0%,
         rgba(0,0,0,0)100%
-    )
+    ), url('./images/6e9794bcedeecf5a8f8f41338a2a7345.webp')
+}
+
+.home {
+    margin-top: 30vh;
 }
 
 /*-------------Modelo de autenticação------------*/
 
 .aut-Modal {
-    position: center;
-    top: 175px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
     margin-left: auto;
     margin-right: auto;
     max-width: 360px;
@@ -91,3 +119,91 @@ nav .logo-container .logo{
 .aut-Modal .botao-icone-fechar {
     float: right;
 }
+
+.aut-Modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.aut-Modal input[type=email],
+.aut-Modal input[type=senha] {
+    padding: 8px;
+    margin: 8px;
+    font-size: 17px;
+}
+
+/*-------------Página OnBoarding Formulário---------*/
+
+.onboarding form {
+    display: flex;
+    justify-content: center;
+}
+.onboarding form section {
+    display: flex;
+    flex-direction:column;
+    padding: 20px;
+    width: 35%;
+    text-align: start;
+}
+
+.onboarding form input {
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: solid 2px rgb(219,219,219);
+    border-radius: 10px;
+}
+
+.onboarding form input::-webkit-outer-spin-button,
+.onboarding form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.onboarding form label {
+    margin: 10px 0;
+}
+
+.onboarding form .multiplas-entrada {
+    display: flex;
+    flex-direction: row;
+}
+
+.onboarding form .multiplas-entrada input {
+    margin-right: 10px;
+}
+
+.onboarding form .multiplas-entrada label {
+    padding: 10px;
+    border: solid 2px rgb(144,144,144);
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+.onboarding form input[type="radio"] {
+    display: none;
+}
+
+.onboarding form input[type="number"] {
+    width: 10%;
+
+}
+
+.onboarding form input[type="radio"]:checked + label {
+    border: solid 2px rgb(221,39,22);
+}
+
+.onboarding form input[type="submit"]:hover {
+    background-color: rgb(235,235,235);
+}
+
+.onboarding form input[type="submit"]:active {
+    background-color: rgb(226,115,155);
+}
+
+
+
+
+
+

@@ -3,11 +3,14 @@ import brancoLogo from '../images/logo-astromat-branco.png'
 import corLogo from '../images/logo-astromat-cor.png'
 
 
-const Nav = ({minimo, autToken, setShowModal, showModal}) => {
+const Nav = ({minimo, setShowModal, showModal, setInscrever}) => {
 
     const botaoNavClicado = () => {
         setShowModal(true)
+        setInscrever(false)
     }
+
+    const autToken = true
 
     return (
         <nav>
