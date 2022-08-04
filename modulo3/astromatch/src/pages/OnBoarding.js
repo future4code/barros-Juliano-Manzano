@@ -1,11 +1,14 @@
-import React  from 'react';
-import {useState} from 'react';
-import Nav from '../components/Nav';
-
+import React  from 'react'
+import {useState} from 'react'
+import Nav from '../components/Nav'
+import {useCookies} from 'react-cookie'
+import {useNavigate} from 'react-router-dom'
+import axios from 'axios'
 
 
 const OnBoarding = () => {
 
+    const [cookies, setCookie, removeCookie] = useCookies(null)
     const [formData, setFormData] = useState ({
         id_usuario: '',
         nome: '',
@@ -21,16 +24,30 @@ const OnBoarding = () => {
         matches: []
     })
 
-    const handleSubmit =() => {
-        console.log('clicado');
+    let navigate = useNavigate()
+
+    const handleSubmit = async (e) => {
+        console.log('clicado')
+        e.preventDefault()
+        try {
+            const response = await axios.put('http://localhost:8000/user', {formData})
+            console.log(response)
+            const success = response.status === 200
+            if (success) navigate('/dashboard')
+        } catch (err) {
+            console.log(err)
+        }
     }
+
     const handleChange =(e) => {
         console.log('e',e)
-        const value = e.target.value
-        const name = e.target.nome
-        console.log('valor' + value,'name' + name);
+        const value = e.target.value === "checkbox" ? e.target.checked : e.target.value
+        const name = e.target.name
+        console.log(value,name);
+        
         setFormData((prevState) =>({
-            ...prevState
+            ...prevState,
+            [name]: value
         }))
     }
     console.log(formData);
@@ -38,7 +55,6 @@ const OnBoarding = () => {
 
     return (
         <>
-
             <Nav minimo={true}
                  setShowModal={() => {}}
                  showModal={false}
@@ -63,7 +79,7 @@ const OnBoarding = () => {
                         <div className='multiplas-entrada'>
                             <input
                                 id="dia"
-                                type=""
+                                type="number"
                                 name="dia_nascimento"
                                 placeholder="DD"
                                 required={true}
@@ -98,7 +114,7 @@ const OnBoarding = () => {
                                 name="identidade-sexual"
                                 value="Homem"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.identidade_sexual === "Homem"}
                             />
                             <label htmlFor="identidade-genero-homem">Homem</label>
                             <input
@@ -107,18 +123,18 @@ const OnBoarding = () => {
                                 name="identidade-sexual"
                                 value="Mulher"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.identidade_sexual === "Mulher"}
                             />
                             <label htmlFor="identidade-genero-mulher">Mulher</label>
                             <input
                                 id="identidade-genero-outro"
                                 type="radio"
                                 name="identidade-sexual"
-                                value="outro"
+                                value="Outros"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.identidade_sexual === "Outros"}
                             />
-                            <label htmlFor="identidade-genero-outro">Outro</label>
+                            <label htmlFor="identidade-genero-outro">Outros</label>
                         </div>
                         <label htmlFor="mostrar-genero">Mostrar gênero no meu perfil</label>
                         <input
@@ -126,7 +142,7 @@ const OnBoarding = () => {
                             type="checkbox"
                             name="mostrar-genero"
                             onChange={handleChange}
-                            checked={false}
+                            checked={formData.mostrar_genero}
                         />
                         <label>Interesse</label>
                         <div className='multiplas-entrada'>
@@ -136,7 +152,7 @@ const OnBoarding = () => {
                                 name="interesse-sexual"
                                 value="Homem"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.interesse_sexual === "Homem"}
                             />
                             <label htmlFor="interesse-genero-homem">Homem</label>
                             <input
@@ -145,16 +161,16 @@ const OnBoarding = () => {
                                 name="interesse-sexual"
                                 value="Mulher"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.interesse_sexual === "Mulher"}
                             />
                             <label htmlFor="interesse-genero-mulher">Mulher</label>
                             <input
                                 id="interesse-genero-todos"
                                 type="radio"
                                 name="interesse-sexual"
-                                value="todos"
+                                value="Todos"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.interesse_sexual === "Todos"}
                             />
                             <label htmlFor="interesse-genero-todos">Todos</label>
                         </div>
@@ -181,7 +197,7 @@ const OnBoarding = () => {
                             required={true}
                         />
                         <div className="foto-perfil">
-                            <img src={formData.url} alt='Foto de Perfil'/>
+                            {formData.url && <img src={formData.url} alt='Foto de Perfil'/>}
                         </div>
 
                     </section>

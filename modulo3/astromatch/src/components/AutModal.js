@@ -1,5 +1,8 @@
-import React  from 'react';
-import {useState} from 'react';
+import React  from 'react'
+import {useState} from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { useCookies } from 'react-cookie'
 
 
 const AutModal = ({setShowModal, seInscreva}) => {
@@ -8,21 +11,34 @@ const AutModal = ({setShowModal, seInscreva}) => {
     const [senha, setSenha] = useState(null)
     const [confirmaSenha, setConfirmaSenha] = useState(null)
     const [error, setError] = useState(null)
+    const [ cookies, setCookie, removeCookie] = useCookies(null)
 
+    let navigate = useNavigate()
     console.log(email, senha, confirmaSenha);
     
-
     const botao1Clicado = () => {
         setShowModal(false)
     }
 
-    const handleSubmit =(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
+        
         try {
             if (seInscreva && (senha !== confirmaSenha)) {
                 setError ('Senha precisa ser igual!')
+                return
             }
             console.log('faça uma solicitação para o banco de dados');
+            const response = await axios.post(`http://localhost:8000/${seInscreva ? 'inscrever' : 'entrar'}`, { email, senha })
+
+            setCookie('autToken', response.data.token)
+            setCookie('UserId', response.data.userId)
+
+            const success = response.status === 201
+            if (success && seInscreva) navigate ('/onBoarding')
+            if (success && !seInscreva) navigate ('/dashboard')
+
+            window.location.reload()
 
         } catch (error) {
             console.log(error);
