@@ -5,7 +5,9 @@ https://wireframe.cc/ym9ou9
 # Surge atualizado 3.0
 
 http://poised-silver.surge.sh/ 3.0
-
+Login área ADM:
+email: astrodev@gmail.com
+senha: 123456
 
 # Getting Started with Create React App
 

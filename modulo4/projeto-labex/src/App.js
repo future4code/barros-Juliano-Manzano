@@ -8,7 +8,7 @@ export const student = 'juliano-manzano-barros/'
 
 function App() {
   useEffect(() => {
-    document.title = "LabeX -"
+    document.title = "LabeX"
   }, [])
   return (
     

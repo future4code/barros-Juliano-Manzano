@@ -22,12 +22,8 @@ const useGetTrips = () => {
         
     return (
         
-        
          trips
-        
-       
-              
-        
+                
     ) 
 }
 
