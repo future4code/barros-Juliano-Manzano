@@ -72,35 +72,6 @@ app.get("/firstUser", async (req: Request, res: Response) => {
 })
 
 
-// app.get("/firstUser", async (req: Request, res: Response) => {
-//     let erroCode = 400
-
-//     try {
-//         let title = req.query.title
-
-//         if(title!== 'name' && title!== 'type'){
-//             title = 'email'
-//          }
-
-        
-//         const result = await connection("aula48_exercicio")
-//         .select("*")
-//         .orderBy(`${title}`, "asc")
-
-
-//         if(!result.length) {
-//             erroCode = 404
-//             throw new Error("Employee Not Found")
-//         }
-
-//         res.send(result)
-
-//     } catch (error:any) {
-//         res.status(erroCode).send(error.message)
-//     }
-// })
-
-
 //Exercício 3
 
 
