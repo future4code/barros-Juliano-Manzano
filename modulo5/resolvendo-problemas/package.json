@@ -1,0 +1,13 @@
+{
+  "name": "resolvendo-problemas",
+  "version": "1.0.0",
+  "description": "Exercicios resolvendo problemas",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "ts-node-dev ./src/index.ts",
+    "start": "node ./build/index.js",
+    "build": "tsc"
+  },
+  "author": "Juliano Manzano",
+  "license": "ISC"
+}
